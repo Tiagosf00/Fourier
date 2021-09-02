@@ -6,7 +6,7 @@ let n = 10; // Número de aproximações
 
 function setup()
 {
-	createCanvas(1600,900);
+	createCanvas(1600,700);
 }
 
 function changeType(newType) {
