@@ -3,16 +3,16 @@ let onda = [];
 
 function setup()
 {
-	createCanvas(1200,1200);
+	createCanvas(1500,1200);
 }
 
 function draw()
 {
 	background(0);
 
-	translate(300,350);
+	translate(500,350);
 	let raio = 150;
-	let n = 10; // Número de aproximações
+	let n = 5; // Número de aproximações
 	let x = 0;
 	let y = 0;
 	
@@ -33,16 +33,16 @@ function draw()
 	}
 	onda.unshift(y);
 
-	translate(300,0);
+	translate(500,0);
 	beginShape();
 	noFill();
 	for(let i=0;i<onda.length;i++)
 		vertex(i, onda[i]);
 	endShape();
 
-	line(x-300,y,0,onda[0]);
+	line(x-500,y,0,onda[0]);
 
-	if(onda.length>500)
+	if(onda.length>1100)
 		onda.pop();
 
 	time += 0.02;

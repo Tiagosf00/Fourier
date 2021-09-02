@@ -12,7 +12,7 @@ function draw()
 
 	translate(300,350);
 	let raio = 150;
-	let n = 2;  // Número de aproximações
+	let n = 100;  // Número de aproximações
 	let x = 0;
 	let y = 0;
 	
