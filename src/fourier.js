@@ -18,7 +18,7 @@ function changeApprox() {
 	if (newApprox == null || newApprox == "") {
 		n = 1;
 	} else {
-		n = newApprox;
+		n = max(0, min(100, newApprox));
 	}
 }
 
@@ -71,8 +71,8 @@ function move(x, y, i) {
 		y += raio/(i*i) * sin(i*time) * sin(i*time);
 	} else if (type == "Serra") {
 		let j = ceil(i/2);
-		x += raio/(2*j) * cos(j*time) * Math.pow(-1,j+1);
-		y += raio/(2*j) * sin(j*time) * Math.pow(-1,j+1);
+		x += raio/(j) * cos(j*time) * Math.pow(-1,j+1);
+		y += raio/(j) * sin(j*time) * Math.pow(-1,j+1);
 	}
 
 	return [x, y]
