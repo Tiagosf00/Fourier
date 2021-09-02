@@ -3,7 +3,7 @@ let onda = [];
 
 function setup()
 {
-	createCanvas(1500,1200);
+	createCanvas(1500,900);
 }
 
 function draw()
@@ -12,7 +12,7 @@ function draw()
 
 	translate(500,350);
 	let raio = 150;
-	let n = 5; // Número de aproximações
+	let n = 10; // Número de aproximações
 	let x = 0;
 	let y = 0;
 	
@@ -42,7 +42,7 @@ function draw()
 
 	line(x-500,y,0,onda[0]);
 
-	if(onda.length>1100)
+	if(onda.length>400)
 		onda.pop();
 
 	time += 0.02;
