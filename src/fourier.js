@@ -2,7 +2,8 @@ let time = 0;
 let onda = [];
 let raio = 150;
 let type = "Quadrada";
-let n = 10; // Número de aproximações
+let approx;
+let input = document.getElementById("approximation");
 
 function setup()
 {
@@ -14,11 +15,11 @@ function changeType(newType) {
 }
 
 function changeApprox() {
-	var newApprox = document.getElementById("approximation").value;
+	var newApprox = input.value;
 	if (newApprox == null || newApprox == "") {
-		n = 0;
+		approx = 1;
 	} else {
-		n = max(0, min(5000, newApprox));
+		approx = max(1, min(5000, newApprox));
 	}
 }
 
@@ -32,7 +33,7 @@ function draw()
 
 	changeApprox();
 	
-	for(let i=1;i<=2*n;i+=2) {
+	for(let i=1;i<=2*approx;i+=2) {
 		let antx=x;
 		let anty=y;
 
