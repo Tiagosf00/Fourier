@@ -16,7 +16,7 @@ function changeType(newType) {
 function changeApprox() {
 	var newApprox = document.getElementById("approximation").value;
 	if (newApprox == null || newApprox == "") {
-		n = 1;
+		n = 0;
 	} else {
 		n = max(0, min(5000, newApprox));
 	}
