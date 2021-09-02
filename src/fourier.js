@@ -18,7 +18,7 @@ function changeApprox() {
 	if (newApprox == null || newApprox == "") {
 		n = 1;
 	} else {
-		n = max(0, min(100, newApprox));
+		n = max(0, min(5000, newApprox));
 	}
 }
 
